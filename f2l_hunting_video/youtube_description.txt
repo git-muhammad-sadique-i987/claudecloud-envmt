@@ -11,6 +11,7 @@ Solve the first two layers of the Rubik's Cube without memorising 41 algorithms.
 🐅 Tiger: different colours on top. Jump, drag back, home (R U R').
 🐊 Crocodile: the same colour on top. Hide, let the prey walk over, strike, then home.
 🦅 Eagle: the white sticker points up. Line up, drop, fly over, grab, then home.
+Prey in the wrong spot? The hunter hides, the prey walks into its kill zone, and the hunter comes back to finish the hunt.
 Plus how to get stuck pieces out, and the golden rule that keeps your solved slots safe.
 
 Try it yourself: every case starts with set-up moves. Hold a solved cube with yellow on top and green in front, do the set-up moves to build the case, then pause and try to solve it. The set-up moves are not the solution.
@@ -19,6 +20,8 @@ Tiger at the front door: F' U F
 The crocodile waits: R U R' U2 R U' R' U
 Crocodile at the front door: F' U' F U2 F' U F U'
 The eagle swoops: R U R' U' R U2 R' U'
+The tiger gives chase: R U' R' U F' U' F U'
+The crocodile waits longer: R U R' U2 R U2 R' U
 Hunter stuck in the den: R U' R' F' U' F
 Prey stuck in the den: R U' R' F' U2 F
 Joined the wrong way: R U' R' U2 F' U' F
@@ -31,8 +34,9 @@ Chapters
 1:46 Tiger
 3:29 Crocodile
 5:25 Eagle
-6:24 Stuck pieces
-8:19 Recap
+6:32 Prey in the wrong spot
+9:45 Stuck pieces
+11:40 Recap
 
 Credits
 The hunting story (hunters, prey, den, kill zone and the golden rule) comes from RiDo's "Hunting Story for F2L" (links above).

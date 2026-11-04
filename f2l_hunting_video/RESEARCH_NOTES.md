@@ -101,3 +101,33 @@ explanation after it.
 - **Credit to RiDo**: the thumbnail reads "F2L HUNTING STORY" with "Based on RiDo's Hunting Story", the title
   card credits RiDo and ParadoxCubing, the YouTube title starts with "F2L Hunting Story", and the description
   opens with RiDo's credit and links to both parts.
+
+## v5 changes (after viewer feedback on v4)
+
+A viewer pointed out that the prey is not always waiting where the basic cases need it: the tiger's prey can be
+on its left, and the crocodile's prey can be in other top-layer spots. A search over every position where the
+hunter and prey are both on top (24, with the hunter turned above the den) confirmed it: v4 showed only 6 of
+them. For a hunter whose white sticker faces sideways, the prey can be:
+
+| Prey | Tiger (top colours differ) | Crocodile (top colours match) |
+|---|---|---|
+| in the kill zone | pounce, 3 moves (in v4) | dive, walk one step, strike, home, 8 moves (in v4) |
+| on the other far spot | **chase**: hide, line up, come back, pounce, 8 moves | **walk two steps** instead of one, 8 moves |
+| touching | joined the wrong way: split it (one shown in v4) | colours match: **already caught**, 4 moves; otherwise split it |
+
+v5 adds a "Prey in the wrong spot" chapter after the eagle, built on RiDo's own description of the tiger
+("chases first if needed: hide, move the prey, unhide") and his **kill zone**:
+
+- The trick: turning the top alone can't help, because the hunter turns too, so the hunter hides first, the
+  prey walks into place, and the hunter comes back.
+- **The tiger gives chase** (`U F' U F U' R U R'`, the shortest possible): the tiger hides through the front
+  door, the way the mirror crocodile does (RiDo's line of action: a hunter hides through the face its white
+  sticker is on), the prey is lined up with its centre as the eagle does it, and the tiger comes back above its
+  den with the prey in the kill zone. The line-up rule holds for every sideways tiger: the mirror tiger hides
+  through the right side instead.
+- **The crocodile waits longer** (`U' R U2 R' U2 R U' R'`, also the shortest): the same crocodile, the prey
+  just walks two steps to the spot next to where it dived.
+- A summary covers the rest: a prey already touching with matching colours is already caught (swing away and
+  home, `U R U' R'`), and one joined the wrong way gets split, which leads into the stuck-pieces chapter. The
+  eagle chapter adds that its line-up step works from any spot.
+- A yellow **KILL ZONE** outline marks the spot the prey must reach, and the recap gets a "Wrong spot?" row.

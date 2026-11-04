@@ -1,0 +1,560 @@
+1
+00:00:00,000 --> 00:00:03,037
+See these two pieces? Watch.
+
+2
+00:00:05,233 --> 00:00:07,610
+Three moves, and that pair's home.
+
+3
+00:00:08,100 --> 00:00:15,161
+By the end of this video, you'll be able to do that with any pair. No memorising, just three animals.
+
+4
+00:00:15,833 --> 00:00:21,719
+This is the F2L Hunting Story. So grab your cube, and let's get into it.
+
+5
+00:00:22,500 --> 00:00:30,085
+A quick refresher first. F2L means the first two layers, and you've already got your white cross on the bottom.
+
+6
+00:00:30,567 --> 00:00:33,172
+Now we pair up a corner with its matching edge,
+
+7
+00:00:33,667 --> 00:00:35,793
+and drop that pair into its slot.
+
+8
+00:00:36,267 --> 00:00:39,578
+Do that four times, and the first two layers are done.
+
+9
+00:00:40,067 --> 00:00:45,372
+To make this stick, we'll tell it as a story. The white corner is our hunter.
+
+10
+00:00:45,867 --> 00:00:48,338
+The edge with the same two colours is its prey.
+
+11
+00:00:48,833 --> 00:00:52,971
+And this empty slot down here is its den. That's home.
+
+12
+00:00:53,467 --> 00:01:00,641
+When the hunter catches the prey, they join up. That's the kill. Then it carries its prey home.
+
+13
+00:01:01,133 --> 00:01:08,471
+There are just three rules. First, the top layer is free. Turn it as much as you like.
+
+14
+00:01:09,067 --> 00:01:14,162
+Second, a side face only turns a quarter turn out, and then it comes straight back.
+
+15
+00:01:14,733 --> 00:01:26,314
+And third, the golden rule. When a side face turns, one of the slots comes up to the top. Make sure it's the empty den, and never a slot you've already solved.
+
+16
+00:01:26,900 --> 00:01:36,531
+So, which hunter have you got? Look at the top colours of the two pieces. If they're different, like a tiger's stripes, it's a tiger.
+
+17
+00:01:37,100 --> 00:01:39,581
+If they're the same colour, it's a crocodile.
+
+18
+00:01:40,167 --> 00:01:45,661
+And if the white sticker is pointing up at the sky, it's an eagle. That's all three.
+
+19
+00:01:46,233 --> 00:01:52,978
+If you'd like to follow along, start with a solved cube. Yellow on top, and green facing you.
+
+20
+00:01:53,567 --> 00:01:59,272
+Then do these set-up moves. They aren't the solution, they just build the case for you.
+
+21
+00:01:59,867 --> 00:02:03,652
+So pause the video, and see if you can solve it before I do.
+
+22
+00:02:04,633 --> 00:02:15,136
+Let's start with the easiest one. Look at the top. There's red on the hunter, and green on the prey. They're different, so this is a tiger.
+
+23
+00:02:15,633 --> 00:02:21,004
+A tiger always hunts from its den. It's sitting right above the empty slot,
+
+24
+00:02:21,500 --> 00:02:23,898
+and its prey is waiting just behind it.
+
+25
+00:02:24,367 --> 00:02:28,575
+Watch the tiger. It jumps onto its prey, R,
+
+26
+00:02:29,067 --> 00:02:31,260
+drags it back over the den, U,
+
+27
+00:02:31,800 --> 00:02:34,662
+and takes it home. R prime.
+
+28
+00:02:35,133 --> 00:02:40,110
+So why does that work? Well, R swings the hunter round to the back,
+
+29
+00:02:40,800 --> 00:02:45,952
+right where the prey is waiting. That's why the prey has to sit behind it.
+
+30
+00:02:46,633 --> 00:02:48,893
+Here it is again, at full speed.
+
+31
+00:02:49,167 --> 00:02:52,306
+Three moves. That's all it takes.
+
+32
+00:02:53,500 --> 00:02:55,451
+Here's the set-up for the mirror version.
+
+33
+00:02:56,433 --> 00:03:02,462
+This is the same tiger, mirrored. The top colours are different, so it's still a tiger.
+
+34
+00:03:02,933 --> 00:03:05,943
+But this time, its white sticker faces the front,
+
+35
+00:03:06,433 --> 00:03:08,603
+so the prey is waiting over on the left.
+
+36
+00:03:09,100 --> 00:03:13,112
+It jumps with the front face this time. F prime.
+
+37
+00:03:13,600 --> 00:03:15,578
+Drags it back, U prime,
+
+38
+00:03:16,067 --> 00:03:18,215
+and home. F.
+
+39
+00:03:18,700 --> 00:03:24,643
+Do you see the pattern? Every R becomes F prime, and the U turns go the other way.
+
+40
+00:03:25,333 --> 00:03:28,895
+So once you've learned one side, you get the other one for free.
+
+41
+00:03:29,567 --> 00:03:32,489
+Set this one up, and have a go before I show you.
+
+42
+00:03:34,733 --> 00:03:44,532
+Now, this one's a bit different. There's green on top of the hunter, and green on top of the prey. Same colour, so it's a crocodile.
+
+43
+00:03:45,000 --> 00:03:51,088
+And crocodiles don't chase. They hide under the water, and wait for the prey to come to them.
+
+44
+00:03:51,567 --> 00:03:56,676
+First, turn the top so the white sticker faces right. U prime.
+
+45
+00:03:57,167 --> 00:04:04,525
+Now it dives under, R. And notice, it's the empty den that comes up, so nothing gets broken.
+
+46
+00:04:05,000 --> 00:04:09,191
+The prey walks right over the hidden crocodile. U.
+
+47
+00:04:09,700 --> 00:04:13,230
+And then, it strikes. R prime.
+
+48
+00:04:13,700 --> 00:04:20,141
+Now we take it home. Swing the pair away from the den first. U two.
+
+49
+00:04:20,633 --> 00:04:26,375
+Then open the den, R, slide it in, U prime, and close it, R prime.
+
+50
+00:04:26,867 --> 00:04:32,399
+Here's the big idea. While the crocodile's hidden, turning the top can't touch it.
+
+51
+00:04:33,067 --> 00:04:38,205
+So you can walk the prey exactly where you want it, and then bring the hunter back up beside it.
+
+52
+00:04:38,900 --> 00:04:43,905
+Full speed now. Hide, wait, strike, and home.
+
+53
+00:04:44,900 --> 00:04:47,724
+The set-up moves are on screen, as always.
+
+54
+00:04:50,033 --> 00:04:54,366
+Red on top, and red on top. Another crocodile.
+
+55
+00:04:54,833 --> 00:04:59,415
+This time we turn its white sticker to the front, so it dives through the front door.
+
+56
+00:04:59,900 --> 00:05:02,865
+Turn it to face the front. U.
+
+57
+00:05:03,333 --> 00:05:05,178
+It dives, F prime,
+
+58
+00:05:05,667 --> 00:05:07,897
+the prey walks over, U prime,
+
+59
+00:05:08,367 --> 00:05:10,923
+and it strikes. F.
+
+60
+00:05:11,400 --> 00:05:13,315
+Swing it away, U two,
+
+61
+00:05:13,800 --> 00:05:18,020
+and take it home. F prime, U, F.
+
+62
+00:05:18,500 --> 00:05:25,088
+It's the same story, just mirrored. If you've got the first crocodile, you've already got this one.
+
+63
+00:05:25,767 --> 00:05:28,069
+And here's the set-up for our last hunter.
+
+64
+00:05:30,733 --> 00:05:37,274
+Last one. The white sticker is pointing straight up at the sky. That's an eagle.
+
+65
+00:05:37,767 --> 00:05:42,466
+Eagles hunt from the air, so first, the prey has to come down to the ground.
+
+66
+00:05:42,933 --> 00:05:49,699
+Look at the prey's side colour. It's red, so line it up over the red centre. U.
+
+67
+00:05:50,200 --> 00:05:56,851
+Its top colour is green, so we turn the red side away from green, R. And down it goes.
+
+68
+00:05:57,333 --> 00:06:00,697
+Now the eagle flies over. U two.
+
+69
+00:06:01,167 --> 00:06:03,759
+And grabs it. R prime.
+
+70
+00:06:04,233 --> 00:06:06,042
+Swing the pair away, U,
+
+71
+00:06:06,567 --> 00:06:11,223
+and take it home. R, U prime, R prime.
+
+72
+00:06:11,700 --> 00:06:17,629
+Why away from green? Because turning the other way would lift a slot you've already solved.
+
+73
+00:06:18,300 --> 00:06:25,164
+And it works wherever the prey starts. Line it up first, then fly until the eagle's right above it.
+
+74
+00:06:25,833 --> 00:06:31,477
+Full speed. Line up, drop, fly over, grab, and home.
+
+75
+00:06:32,467 --> 00:06:43,040
+You've met all three hunters now. But so far, the prey was always waiting in just the right spot. In a real solve, it could be anywhere on top.
+
+76
+00:06:43,633 --> 00:06:53,577
+Each hunter needs its prey in one spot, called the kill zone. For this tiger, that's right behind it. But the prey is over on the left.
+
+77
+00:06:54,167 --> 00:06:57,834
+And just turning the top won't help, because the tiger turns with it.
+
+78
+00:06:58,433 --> 00:07:01,431
+So the hunter hides first, just like the crocodile,
+
+79
+00:07:02,000 --> 00:07:03,747
+the prey walks into place,
+
+80
+00:07:04,333 --> 00:07:07,023
+and the hunter comes back up, ready to hunt.
+
+81
+00:07:07,600 --> 00:07:12,076
+Here's the set-up for this one. Have a go first, if you like.
+
+82
+00:07:13,067 --> 00:07:18,910
+It's our tiger from the start. Red on top of the hunter, and green on top of the prey.
+
+83
+00:07:19,400 --> 00:07:26,055
+But the prey isn't behind it. It's over on the left, so this time, the tiger has to chase it.
+
+84
+00:07:26,533 --> 00:07:30,649
+First, turn its white sticker to the front. U.
+
+85
+00:07:31,167 --> 00:07:39,390
+Now it hides, through the front door. F prime. The empty den comes up, so nothing breaks.
+
+86
+00:07:39,867 --> 00:07:46,169
+While it's hidden, line the prey up with its centre, just like the eagle did. U. Red over red.
+
+87
+00:07:46,667 --> 00:07:49,677
+The tiger comes back up. F.
+
+88
+00:07:50,167 --> 00:07:56,754
+And walks back above its den. U prime. Now the prey is right behind it.
+
+89
+00:07:57,233 --> 00:08:01,712
+So it pounces. R, U, R prime.
+
+90
+00:08:02,200 --> 00:08:07,784
+That's the whole trick. While the tiger's hidden, turning the top only moves the prey.
+
+91
+00:08:08,467 --> 00:08:13,425
+And the mirror tiger hides through the right side instead, just like the first crocodile.
+
+92
+00:08:14,100 --> 00:08:19,476
+Full speed now. Hide, line up, come back, and pounce.
+
+93
+00:08:20,467 --> 00:08:22,509
+And here's a crocodile to set up.
+
+94
+00:08:25,533 --> 00:08:30,166
+Green on top, and green on top. So it's a crocodile.
+
+95
+00:08:30,633 --> 00:08:37,952
+But the prey is further away than before. That's fine. The crocodile just waits a little longer.
+
+96
+00:08:38,433 --> 00:08:41,088
+Spin the white sticker to the right, U prime,
+
+97
+00:08:41,567 --> 00:08:43,847
+and dive. R.
+
+98
+00:08:44,333 --> 00:08:52,838
+Now walk the prey round, until it's right next to where the crocodile went down. U two. That's its kill zone.
+
+99
+00:08:53,333 --> 00:08:55,838
+Strike. R prime.
+
+100
+00:08:56,333 --> 00:08:58,500
+Swing the pair away, U two,
+
+101
+00:08:59,000 --> 00:09:03,657
+and take it home. R, U prime, R prime.
+
+102
+00:09:04,133 --> 00:09:11,003
+So wherever the prey starts, the crocodile does the same thing. The prey just walks a different distance.
+
+103
+00:09:11,700 --> 00:09:15,052
+And the mirror crocodile does the same, through the front door.
+
+104
+00:09:15,733 --> 00:09:20,618
+Full speed. Dive, walk, strike, and home.
+
+105
+00:09:21,600 --> 00:09:29,323
+So that's the trick. If the prey's in the wrong spot, hide the hunter, walk the prey into place, and bring the hunter back.
+
+106
+00:09:30,000 --> 00:09:38,637
+If it's already touching the hunter, and the colours match on both sides, it's already caught. Just swing it away, and take it home.
+
+107
+00:09:39,700 --> 00:09:45,054
+And if they're touching the wrong way, split them up first. That's coming up next.
+
+108
+00:09:45,733 --> 00:09:54,067
+Now, sometimes a piece gets stuck in the den, or the two pieces are stuck together. Don't worry, there's an easy way out.
+
+109
+00:09:54,567 --> 00:09:55,514
+Lift it out,
+
+110
+00:09:56,000 --> 00:09:56,991
+step it clear,
+
+111
+00:09:57,467 --> 00:09:58,798
+and put the face back.
+
+112
+00:09:59,267 --> 00:10:08,243
+And here's the trick. Lift it so it comes up as a tiger, with the prey right behind it. Then you already know how to finish.
+
+113
+00:10:08,733 --> 00:10:10,352
+Set this one up first.
+
+114
+00:10:12,400 --> 00:10:16,205
+Here, the hunter's stuck in its den, and it's twisted the wrong way.
+
+115
+00:10:16,700 --> 00:10:20,315
+Lift it out with the front face. F prime.
+
+116
+00:10:20,800 --> 00:10:22,319
+Step it clear, U,
+
+117
+00:10:22,833 --> 00:10:25,607
+and put the face back. F.
+
+118
+00:10:26,100 --> 00:10:34,711
+And look, it's a tiger, with its prey right behind it. You know this one. R, U, R prime.
+
+119
+00:10:35,633 --> 00:10:37,387
+Here's the set-up for the next one.
+
+120
+00:10:39,500 --> 00:10:46,071
+This time, the prey is stuck in the den, flipped the wrong way. The hunter's waiting at the back.
+
+121
+00:10:46,567 --> 00:10:49,568
+Lift the prey out. F prime.
+
+122
+00:10:50,067 --> 00:10:51,936
+Move it clear, U two,
+
+123
+00:10:52,433 --> 00:10:55,561
+put the face back, F, and there's another tiger.
+
+124
+00:10:56,033 --> 00:11:00,512
+So it pounces. R, U, R prime.
+
+125
+00:11:01,000 --> 00:11:02,765
+And the set-up for the last one.
+
+126
+00:11:05,333 --> 00:11:11,661
+In this one, they're touching, but they're joined the wrong way. So first, we split them up.
+
+127
+00:11:12,133 --> 00:11:14,854
+Hide the prey. F prime.
+
+128
+00:11:15,333 --> 00:11:17,192
+Walk the hunter away, U,
+
+129
+00:11:17,733 --> 00:11:21,617
+and bring the prey back. F. Now they're apart.
+
+130
+00:11:22,100 --> 00:11:25,799
+Walk the tiger round to its den. U two.
+
+131
+00:11:26,267 --> 00:11:30,544
+And pounce. R, U, R prime.
+
+132
+00:11:31,033 --> 00:11:40,064
+Did you notice? Every time we lifted something, it was the empty den that came up. That's the golden rule, every time.
+
+133
+00:11:40,733 --> 00:11:49,542
+Let's recap. Different colours on top? That's a tiger. Jump, drag back, and home.
+
+134
+00:11:50,133 --> 00:11:57,051
+The same colours? Crocodile. Hide, let the prey walk over, then strike.
+
+135
+00:11:57,633 --> 00:12:04,357
+White sticker up? Eagle. Line up, drop, fly over, and grab.
+
+136
+00:12:04,933 --> 00:12:11,331
+Prey in the wrong spot? Hide the hunter, walk the prey into place, and bring the hunter back.
+
+137
+00:12:11,900 --> 00:12:21,195
+And if anything's stuck, lift it out so it comes up as a tiger. Just remember the golden rule. Only ever lift the empty den.
+
+138
+00:12:21,767 --> 00:12:27,413
+Don't worry if it feels slow at first. Everyone's F2L is slow at first.
+
+139
+00:12:27,900 --> 00:12:31,787
+Say the story out loud as you turn, and the speed will come on its own.
+
+140
+00:12:32,267 --> 00:12:38,421
+Which hunter gave you the most trouble? Let me know in the comments. Happy hunting.
+

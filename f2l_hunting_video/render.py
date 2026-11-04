@@ -63,6 +63,7 @@ CREDIT = ("Story: RiDo's \"Hunting Story for F2L\".  Teaching flow: ParadoxCubin
 GREY = (74, 74, 84)
 BODY = (14, 14, 18)
 HUNTER, PREY = (1, -1, 1), (1, 0, 1)
+ZONES = {"UB": (0, 1.5, -1), "UL": (-1, 1.5, 0), "UF": (0, 1.5, 1), "UR": (1, 1.5, 0)}  # top-sticker centres
 
 # ---------------------------------------------------------------- background
 
@@ -375,6 +376,15 @@ def render(fr):
         cx, cy, scale = fr.get("cube_xy", (890, 318)) + (fr.get("cube_scale", 104),)
         mats = cubie_mats(cube, fr)
         draw_cube(draw, cube, mats, V, cx * SS, cy * SS, scale * SS, fr.get("glow", True))
+        if fr.get("zone"):
+            # the kill zone: the top-layer spot the prey has to reach, outlined, with its own label
+            c = np.array(ZONES[fr["zone"]], float)
+            corners = [c + np.array([a * 0.47, 0, b * 0.47]) for a, b in ((1, 1), (-1, 1), (-1, -1), (1, -1), (1, 1))]
+            pts = [project(V @ p, cx, cy, scale) for p in corners]
+            draw.line(S(*[v for pt in pts for v in pt]), fill=(255, 205, 0), width=5 * SS, joint="curve")
+            zc = project(V @ c, cx, cy, scale)
+            tag(draw, zc, "KILL ZONE", (255, 205, 0), (20, 16, 30), 1 if zc[0] >= cx else -1, None,
+                CARD_X1 + 10 if fr.get("card") else 12)
         if fr.get("tags"):
             idx = {tuple(int(v) for v in c.home): i for i, c in enumerate(cube.cubies)}
             emo, name = fr.get("animal", (None, "HUNTER"))
@@ -434,14 +444,17 @@ def render(fr):
 
     if fr.get("table"):
         y = 150
+        step = min(98, 410 // len(fr["table"]))  # rows shrink to fit above the footer
+        h = step - 10
         for emo, name, recog, alg, note in fr["table"]:
-            draw.rounded_rectangle(S(60, y, 1220, y + 86), radius=14 * SS, fill=(30, 24, 48))
-            x0 = 84 + (emoji(draw, 80, y + 18, emo, 40) + 8 if emo else 0)
-            draw.text(S(x0, y + 10), name, font=font(26), fill=(255, 205, 0))
-            draw.text(S(x0, y + 46), recog, font=font(17, "SemiBold"), fill=(120, 200, 255))
-            draw.text(S(470, y + 10), alg, font=font(26), fill=(255, 255, 255))
-            draw.text(S(470, y + 50), note, font=font(17, "Medium"), fill=(190, 180, 220))
-            y += 98
+            draw.rounded_rectangle(S(60, y, 1220, y + h), radius=14 * SS, fill=(30, 24, 48))
+            x0 = 84 + (emoji(draw, 80, y + (h - 50) / 2, emo, 40) + 8 if emo else 0)
+            top = (h - 66) / 2
+            draw.text(S(x0, y + top), name, font=font(26), fill=(255, 205, 0))
+            draw.text(S(x0, y + top + 36), recog, font=font(17, "SemiBold"), fill=(120, 200, 255))
+            draw.text(S(470, y + top), alg, font=font(26), fill=(255, 255, 255))
+            draw.text(S(470, y + top + 40), note, font=font(17, "Medium"), fill=(190, 180, 220))
+            y += step
 
     if fr.get("footer"):
         draw.text(S(60, 562), fr["footer"], font=font(22, "SemiBold"), fill=(120, 200, 255))
@@ -512,6 +525,7 @@ Solve the first two layers of the Rubik's Cube without memorising 41 algorithms.
 🐅 Tiger: different colours on top. Jump, drag back, home (R U R').
 🐊 Crocodile: the same colour on top. Hide, let the prey walk over, strike, then home.
 🦅 Eagle: the white sticker points up. Line up, drop, fly over, grab, then home.
+Prey in the wrong spot? The hunter hides, the prey walks into its kill zone, and the hunter comes back to finish the hunt.
 Plus how to get stuck pieces out, and the golden rule that keeps your solved slots safe.
 
 Try it yourself: every case starts with set-up moves. Hold a solved cube with yellow on top and green in front, do the set-up moves to build the case, then pause and try to solve it. The set-up moves are not the solution.

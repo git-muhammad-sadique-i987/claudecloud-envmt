@@ -1,8 +1,8 @@
-"""The Hunting Story (v4) script and the frame-by-frame timeline built from it.
+"""The Hunting Story (v5) script and the frame-by-frame timeline built from it.
 
 RiDo's "Hunting Story for F2L" told by a friendly cubing coach, in the shape of ParadoxCubing's
 "F2L For Beginners": the five basic cases (each in the fewest moves that never lift a solved slot),
-then how to get stuck pieces out, then a recap.
+then what to do when the prey is in the wrong spot, then how to get stuck pieces out, then a recap.
 
 Characters (front-right slot, white cross on the bottom, green front, yellow top):
   HUNTER = the white corner (white-green-red); it is a CROCODILE, TIGER or EAGLE
@@ -116,8 +116,54 @@ CASES = [
                 ("U", "swing away", "Swing the pair **away**", "Swing the pair away, ^U,"),
                 ("R U' R'", "home", "**Open**, slide in, **close**", "and take it home. ^R, U prime, R prime.")],
          why=[(("•", "Turning toward green lifts a **solved** slot"),
-               "Why away from green? Because turning the other way would lift a slot you've already solved.")],
+               "Why away from green? Because turning the other way would lift a slot you've already solved."),
+              (("•", "From any spot: **line up** first"),
+               "And it works wherever the prey starts. Line it up first, then fly until the eagle's right above it.")],
          replay="Full speed. Line up, drop, fly over, grab, and home."),
+
+    # prey in the wrong spot: the hunter hides, the prey walks into place, the hunter comes back
+    dict(chapter=None, color=ORANGE, animal=(TIGER, "TIGER"), title="The tiger gives chase", alg="U F' U F U' R U R'",
+         chase=True, chip="TIGER · WRONG SPOT", spot_zone="UB",
+         setup=["Here's the set-up for this one. Have a go first, if you like."],
+         spot=[((TIGER, "Top colours **different**: tiger"),
+                "It's our tiger from the start. Red on top of the hunter, and green on top of the prey."),
+               (("•", "Prey on the **left**, not in the kill zone"),
+                "But the prey isn't behind it. It's over on the left, so this time, the tiger has to chase it.")],
+         steps=[("U", "turn", "Turn the white to the **front**", "First, turn its white sticker to the front. ^U."),
+                ("F'", "hide", "**Hide** through the front door",
+                 "Now it hides, through the front door. ^F prime. The empty den comes up, so nothing breaks."),
+                ("U", "line up", "Line the prey up with its **centre**",
+                 "While it's hidden, line the prey up with its centre, just like the eagle did. ^U. Red over red."),
+                ("F", "come back", "Come back **up**", "The tiger comes back up. ^F."),
+                ("U'", "to the den", "Back above the **den**",
+                 "And walks back above its den. ^U prime. Now the prey is right behind it.", None,
+                 dict(zone="UB")),
+                ("R U R'", "pounce", "**Pounce**", "So it pounces. ^R, U, R prime.")],
+         why=[(("•", "A hidden hunter **stays put**"),
+               "That's the whole trick. While the tiger's hidden, turning the top only moves the prey."),
+              (("•", "Mirror tiger: hide through the **right**"),
+               "And the mirror tiger hides through the right side instead, just like the first crocodile.")],
+         replay="Full speed now. Hide, line up, come back, and pounce."),
+    dict(chapter=None, color=GREEN, animal=(CROC, "CROCODILE"), title="The crocodile waits longer",
+         alg="U' R U2 R' U2 R U' R'", chase=True, chip="CROCODILE · WRONG SPOT",
+         setup=["And here's a crocodile to set up."],
+         spot=[((CROC, "Top colours **the same**: crocodile"), "Green on top, and green on top. So it's a crocodile."),
+               (("•", "The prey is **further** away"),
+                "But the prey is further away than before. That's fine. The crocodile just waits a little longer.")],
+         steps=[("U'", "get ready", "Spin so the white faces **right**", "Spin the white sticker to the right, ^U prime,"),
+                ("R", "dive", "**Dive!**", "and dive. ^R."),
+                ("U2", "prey walks", "Walk the prey **next to** the hiding spot",
+                 "Now walk the prey round, until it's right next to where the crocodile went down. ^U two. "
+                 "That's its kill zone.", None, dict(zone="UB")),
+                ("R'", "strike", "**Strike!**", "Strike. ^R prime."),
+                ("U2", "swing away", "Swing the pair **away**", "Swing the pair away, ^U two,"),
+                ("R U' R'", "home", "**Open**, slide in, **close**", "and take it home. ^R, U prime, R prime.")],
+         why=[(("•", "Any spot: walk the prey into the **kill zone**"),
+               "So wherever the prey starts, the crocodile does the same thing. The prey just walks a different "
+               "distance."),
+              (("•", "Mirror crocodile: same idea, **front** door"),
+               "And the mirror crocodile does the same, through the front door.")],
+         replay="Full speed. Dive, walk, strike, and home."),
 
     dict(chapter=None, color=PURPLE, animal=(None, "HUNTER"), title="Hunter stuck in the den", alg="F' U F R U R'",
          fix=True, setup=["Set this one up first."],
@@ -318,7 +364,7 @@ def play_case(B, case, num, total):
         spans.append((start, len(s[0].split()), s[1]))
         start += len(s[0].split())
     emo, name = case["animal"]
-    chip = f"{name} · CASE {num} OF {total}" if not case.get("fix") else "STUCK PIECES"
+    chip = case.get("chip") or (f"{name} · CASE {num} OF {total}" if not case.get("fix") else "STUCK PIECES")
     base = dict(kind="case", chip=chip, chip_color=case["color"], chip_emoji=emo, title=case["title"],
                 subtitle=f"Solved in **{len(tokens)} moves**", tags=True, animal=(emo, name), alg_tokens=tokens,
                 alg_chunks=spans, alg_cur=-1, alg_done=0)
@@ -327,16 +373,18 @@ def play_case(B, case, num, total):
     set_up(B, case, base)
     B.cube = Cube().run(invert(alg))
 
-    # spot it
-    B.reveal(dict(base, den_tag=True), "SPOT IT", case["color"], case["spot"])
+    # spot it (with the kill zone marked, when the prey isn't in it)
+    zone = case.get("spot_zone")
+    B.reveal(dict(base, den_tag=not zone, zone=zone), "SPOT IT", case["color"], case["spot"])
 
-    # solve it
+    # solve it; a step may add a pop-up word and extra frame fields (such as the kill zone marker)
     steps = case["steps"]
     done = 0
     for k, step in enumerate(steps):
         m, _, bullet, spoken = step[:4]
         items = [(str(j + 1), s[2], "done" if j < k else ("active" if j == k else "todo")) for j, s in enumerate(steps)]
-        fr = dict(base, card=dict(head="SOLVE IT", color=case["color"], items=items), chunk_hint=k, alg_done=done)
+        fr = dict(base, card=dict(head="SOLVE IT", color=case["color"], items=items), chunk_hint=k, alg_done=done,
+                  **(step[5] if len(step) > 5 else {}))
         dur = B.say(spoken)
         if B.mark is not None:
             B.hold_frames(fr, max(int(0.35 * B.fps), B.mark - len(B.frames) - int(0.1 * B.fps)))
@@ -345,7 +393,7 @@ def play_case(B, case, num, total):
         for tok in m.split():
             B.move(dict(fr, alg_cur=done, alg_done=done), tok)
             done += 1
-        if len(step) > 4:
+        if len(step) > 4 and step[4]:
             B.popup(step[4], (255, 150, 60), 1.5)
         B.wait_speech(dict(fr, alg_done=done), 0.5)
     finished = [(str(j + 1), s[2], "done") for j, s in enumerate(steps)]
@@ -479,15 +527,73 @@ def _build(fps, dry=False):
         B.narrate(dict(sb, animal=cur["animal"], card=dict(head="LOOK AT THE TOP", color=PURPLE, items=items)), text,
                   0.6)
 
-    # ---- the five basic cases, then the stuck pieces
-    basics = [c for c in CASES if not c.get("fix")]
+    # ---- the five basic cases, then the prey in the wrong spot, then the stuck pieces
+    basics = [c for c in CASES if not c.get("fix") and not c.get("chase")]
     for i, case in enumerate(basics, 1):
         if case["chapter"]:
             B.chapter(case["chapter"])
         play_case(B, case, i, len(basics))
 
-    B.chapter("Stuck pieces")
+    B.chapter("Prey in the wrong spot")
+    chases = [c for c in CASES if c.get("chase")]
     fixes = [c for c in CASES if c.get("fix")]
+    B.cube = Cube().run(invert(chases[0]["alg"]))
+    wb = dict(kind="intro", chip="WRONG SPOT?", chip_color=ORANGE, title="Prey in the wrong spot?", tags=True,
+              animal=(TIGER, "TIGER"))
+    shown = []
+    for item, text, zone, demo in [
+            (None, "You've met all three hunters now. But so far, the prey was always waiting in just the right "
+                   "spot. In a real solve, it could be anywhere on top.", None, ()),
+            (("•", "The prey must be in the **kill zone**"),
+             "Each hunter needs its prey in one spot, called the kill zone. For this tiger, that's right behind it. "
+             "But the prey is over on the left.", "UB", ()),
+            (("•", "Turning the top **won't** help"),
+             "And just turning the top won't help, because the tiger turns with it.", None, ("U", "U'")),
+            (("1", "**Hide** the hunter"), "So the hunter hides first, just like the crocodile,", None, ()),
+            (("2", "**Walk** the prey into place"), "the prey walks into place,", None, ()),
+            (("3", "Come **back**, and hunt"), "and the hunter comes back up, ready to hunt.", None, ())]:
+        if item:
+            shown.append(item)
+        items = [(ic, tx, "new" if item and j == len(shown) - 1 else "plain") for j, (ic, tx) in enumerate(shown)]
+        fr = dict(wb, card=dict(head="THE TRICK", color=ORANGE, items=items), zone=zone)
+        dur = B.say(text)
+        if demo:
+            B.hold(fr, min(1.0, dur * 0.4))
+            for tok in demo:
+                B.move(dict(fr, speed_label=f"move: {tok}"), tok, seconds=0.7, pause=0.15, pops=False)
+        B.wait_speech(fr, 0.6)
+    for case in chases:
+        play_case(B, case, 0, 0)
+
+    # where's the prey: the cases left over, each shown on the cube
+    caught = "U R U' R'"
+    sb = dict(kind="intro", chip="WRONG SPOT?", chip_color=ORANGE, title="Where's the prey?", tags=True)
+    shown = []
+    for item, text, setup, animal, demo in [
+            (("•", "Wrong spot: **hide**, walk, come back"),
+             "So that's the trick. If the prey's in the wrong spot, hide the hunter, walk the prey into place, "
+             "and bring the hunter back.", invert(chases[0]["alg"]), (TIGER, "TIGER"), None),
+            (("•", "Touching, colours **match**: already caught"),
+             "If it's already touching the hunter, and the colours match on both sides, it's already caught. "
+             "Just swing it away, ^and take it home.", invert(caught), (None, "HUNTER"), caught),
+            (("•", "Touching the **wrong** way: split them"),
+             "And if they're touching the wrong way, split them up first. That's coming up next.",
+             invert(fixes[2]["alg"]), (None, "HUNTER"), None)]:
+        B.cube = Cube().run(setup)
+        shown.append(item)
+        items = [(ic, tx, "new" if j == len(shown) - 1 else "plain") for j, (ic, tx) in enumerate(shown)]
+        fr = dict(sb, animal=animal, card=dict(head="WHERE'S THE PREY?", color=ORANGE, items=items))
+        B.say(text)
+        if demo:
+            toks = demo.split()
+            fr = dict(fr, alg_tokens=toks, alg_chunks=[(0, 1, "swing away"), (1, 3, "home")], alg_cur=-1, alg_done=0)
+            B.hold_frames(fr, max(int(0.35 * B.fps), (B.mark or 0) - len(B.frames) - int(1.0 * B.fps)))
+            for i, tok in enumerate(toks):
+                B.move(dict(fr, alg_cur=i, alg_done=i), tok)
+            fr = dict(fr, alg_done=len(toks))
+        B.wait_speech(fr, 0.7)
+
+    B.chapter("Stuck pieces")
     B.cube = Cube().run(invert(fixes[0]["alg"]))
     base = dict(kind="intro", chip="STUCK PIECES", chip_color=PURPLE, title="When a piece is stuck", tags=True,
                 animal=(None, "HUNTER"))
@@ -509,6 +615,7 @@ def _build(fps, dry=False):
         (TIGER, "Tiger", "different top colours", "R U R'", "Jump, drag back, home."),
         (CROC, "Crocodile", "same top colours", "U' R U R'  +  U2 R U' R'", "Hide, prey walks over, strike. Then home."),
         (EAGLE, "Eagle", "white sticker up", "U R U2 R'  +  U R U' R'", "Line up, drop, fly over, grab. Then home."),
+        (None, "Wrong spot?", "prey not in the kill zone", "hide · walk · come back", "Then hunt as usual."),
         (None, "Stuck?", "in the den, or joined wrong", "lift · clear · put back", "Bring it up as a tiger, then pounce."),
     ]
     B.cube = Cube()
@@ -518,6 +625,7 @@ def _build(fps, dry=False):
     for text in ["Let's recap. Different colours on top? That's a tiger. Jump, drag back, and home.",
                  "The same colours? Crocodile. Hide, let the prey walk over, then strike.",
                  "White sticker up? Eagle. Line up, drop, fly over, and grab.",
+                 "Prey in the wrong spot? Hide the hunter, walk the prey into place, and bring the hunter back.",
                  "And if anything's stuck, lift it out so it comes up as a tiger. "
                  "Just remember the golden rule. Only ever lift the empty den."]:
         B.narrate(base, text, 0.6)
